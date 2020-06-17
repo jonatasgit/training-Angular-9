@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { PokemonDetailComponent } from './pokemon/pokemon-detail/pokemon-detail.component';
+import { PokeApiService } from './poke-api.service';
 
 
 
@@ -10,6 +11,7 @@ import { PokemonDetailComponent } from './pokemon/pokemon-detail/pokemon-detail.
   imports: [
     CommonModule
   ],
-  exports: [PokemonComponent]
+  exports: [PokemonComponent],
+  providers: [PokeApiService]
 })
 export class ModPokemonsModule { }
