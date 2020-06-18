@@ -1,0 +1,6 @@
+<h2>input-property works!</h2>
+
+<p>Info do componente Data Bind = {{ dados }} </p>
+
+<p>Valor inicial = {{ valorInicial }}</p>
+<app-output-property [valor]="valorInicial"  (mudouValor)="onMudouValor($event)"></app-output-property>

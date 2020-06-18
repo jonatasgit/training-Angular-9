@@ -1,0 +1,27 @@
+<p>data-binding works!</p>
+<article>
+    <h3>Interpolation</h3>
+    <p>URL: {{ url }}</p>
+    <p>chama metodo no interpolation {{ 1 + 1 - getValor() }}</p>
+
+    <h3>Property Binding</h3>
+    <img src="{{ imageUrl }}">
+    <img [src]="imageUrl">
+
+    <h3>Class e Style Binding</h3>
+    <span>Alterando atributos da classe conforme condição</span>
+    <div>
+        Selecione uma classe:
+        <select #classeSelecionada (change)="0">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-info">Info</option>
+            <option value="alert-danger">Perigo</option>
+        </select>
+        <br>
+        Valor Selecionado: {{ classeSelecionada.value }}
+        <div class="alert" [class.span]="classeSelecionada.value == 'alert-info'">Alo</div>
+    </div>
+    <div>
+        <app-input-property [dados]="dadosEntreComponentes"></app-input-property>
+    </div>
+</article>
